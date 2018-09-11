@@ -77,7 +77,7 @@ function csv2html_convert(in_csv, config){
 
 		for(var q = 0; q < sum_arr.length; q ++){   //go through sum array
 			if(type_arr[q] == 0) fin_html += "<td" + table_end_class + ">" + sum_ignore_string + "</td>\n";
-			if(type_arr[q] == 1) fin_html += "<td" + table_end_class + ">" + sum_arr[q] + csv[(csv.length > 1) ? 2 : 0].split(',')[q].replace(/[0-9]/g, '').replace('.', '') + "</td>\n";
+			if(type_arr[q] == 1) fin_html += "<td" + table_end_class + ">" + sum_arr[q] + csv[(csv.length > 1) ? 2 : 0].split(delimiter)[q].replace(/[0-9]/g, '').replace('.', '') + "</td>\n";
 		}
 		
 		fin_html += "</tr>\n";   //add new row end tag
