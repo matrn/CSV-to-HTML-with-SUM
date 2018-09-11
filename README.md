@@ -5,16 +5,21 @@ This simple javascript script converts CSV file to HTML table with the possibili
 
 ## Getting Started
 
-After downloading this repository open file named index.html, this file is example os usage.
+After downloading this repository open file named index.html, this file is example of usage.
+
+## Files
+ * index.html - example of usage
+ * csv2html.js - javascript file with functions
+ * test_data.csv - example CSV data
 
 ## CSV file structure
 
-1. row are types of columns - str = string, sum = sum function will be applied
+1. row are types of columns - str = string, sum = sum function
 2. row are names of columns
 3. and everything else are data
 
 ## HTML table structure
-1\. row are names from 2. row of CSV file
+First row are names from second row of CSV file
 Last row are sum function results - if no sum is declared in first row this row will not be showed, unit will be parsed from 3. row and specific column
 
 ## Functions
