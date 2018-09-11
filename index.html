@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="csv2html.js"></script>
+
+	<meta charset="UTF-8">
+	<title>csv2html</title>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+		}
+
+		#test-table th, td {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+		#test-table, .table-header, .table-body, .table-end {
+			border: 1px solid black; 
+		}
+
+		.table-header, .table-end {
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<h1>CSV to HTML with SUM function</h1>
+	<table id="test-table"></table>
+
+	<script>
+		var config = {table_id: "test-table", table_header_class: "table-header", table_body_class: "table-body", table_end_class: "table-end", sum_ignore_string: "-", delimiter: ','}
+		csv2html_GET_file("test_data.csv", config, csv2html_convert);   //call function to download csv file using HTTP GET request
+	</script>
+</body>
+</html>
