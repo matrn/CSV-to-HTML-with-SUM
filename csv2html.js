@@ -72,7 +72,7 @@ function csv2html_convert(in_csv, config){
 		}
 	}
 
-	if(1 in type_arr){   //check if we have any sum type in array
+	if(type_arr.includes(1)){   //check if we have any sum type in array
 		fin_html += "<tr>\n";   //add new row start tag
 
 		for(var q = 0; q < sum_arr.length; q ++){   //go through sum array
